@@ -6,6 +6,7 @@
 #include <QRect>
 #include <QMainWindow>
 #include <QFontDatabase>
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -22,6 +23,7 @@ public:
     void LoadFonts(){
         //We'll Load all the fonts we need in here
         QFontDatabase::addApplicationFont(":/Fonts/Kiona-Regular.ttf");
+        QFontDatabase::addApplicationFont(":/Fonts/Comfortaa-Regular.ttf");
     }
     ~MainWindow();
 };

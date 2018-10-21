@@ -26,11 +26,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    loginscreen.cpp \
+        loginscreen.cpp \
 
 
 HEADERS += \
         mainwindow.h \
-    loginscreen.h
+        loginscreen.h \
+    loginfunctions.h
 
-DISTFILES +=
