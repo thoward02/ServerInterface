@@ -15,6 +15,9 @@ public:
 private:
     QFrame * interface;
     void BuildScreen();
+    void BuildLeftSide();
+    void BuildRightSide();
+    int LBH, LBW;
 
 
 };

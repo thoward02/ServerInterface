@@ -15,32 +15,44 @@ void LoginScreen::Show(){
 }
 
 void LoginScreen::BuildScreen(){
+
     //Start building the frames
     int x = width;
     int y = height;
     interface->setGeometry(0, 0, x, y);
     interface->setStyleSheet("QFrame#LoginFrame{background:#696969;}");
+    BuildLeftSide();
+    BuildRightSide();
+
+}
+
+void LoginScreen::BuildLeftSide(){
+
+
+    int x = width;
+    int y = height;
 
     //Build The Login Box
+
     QFrame * LoginBox = new QFrame(interface);
     LoginBox->setGeometry(0, 0, x / 3 , y);
     LoginBox->setObjectName("LoginBox");
-    LoginBox->setStyleSheet("QFrame#LoginBox{background:#a2a2a2;}");
-    int LBW = LoginBox->width();
-    int LBH = LoginBox->height();
+    LoginBox->setStyleSheet("QFrame#LoginBox{background:#434343;}");
+    LBW = LoginBox->width();
+    LBH = LoginBox->height();
 
     //Login Title
     QLabel * LoginTitle = new QLabel("L O G I N", LoginBox);
     LoginTitle->setGeometry(LBW * .35, LBH * .1, LBW * .5, LBH * .05);
-    LoginTitle->setStyleSheet("QLabel{font-size: 40px; color: #696969;}");
+    LoginTitle->setStyleSheet("QLabel{font-size: 40px; color: #2b8fab;}");
 
     //Login Title Font
     QFont LoginTK = QFont("Kiona", 20, 4);
     LoginTitle->setFont(LoginTK);
 
     //Username&Password Title Styles
-    QString UPStyle = "QLabel{color: #696969}";
-    QString UBStyle = "QLineEdit{background: #8f8e8e; border:none;color: #696969;}";
+    QString UPStyle = "QLabel{color: #2b8fab}";
+    QString UBStyle = "QLineEdit{background: #5c5c5c; border:none;color: #2b8fab;}";
 
     //Fonts
     QFont UPTextF = QFont("Kiona", 15, 1);
@@ -78,7 +90,7 @@ void LoginScreen::BuildScreen(){
     QPushButton * LoginButton = new QPushButton(LoginBox);
     LoginButton->setText("LOGIN ->");
     LoginButton->setGeometry(LBW * .1, LBH * .45, LBW * .75, LBH * .05);
-    LoginButton->setStyleSheet("QPushButton{background: #8f8e8e; border:none;color: #696969;} QPushButton:hover{background: #696969;color: #8f8e8e;}");
+    LoginButton->setStyleSheet("QPushButton{background: #5c5c5c; border:none;color: #2b8fab;} QPushButton:hover{background: #2b8fab;color: #5c5c5c;}");
     LoginButton->setFont(LBFont);
 
     //MiscButton Fonts
@@ -88,14 +100,14 @@ void LoginScreen::BuildScreen(){
     QPushButton * CAButton = new QPushButton(LoginBox);
     CAButton->setText("Create Account...");
     CAButton->setGeometry(LBW * .1, LBH * .525, LBW * .475, LBH * .025);
-    CAButton->setStyleSheet("QPushButton{border:none; background:rgba(0,0,0,0); color:#696969; text-align:left;}QPushButton:hover{color:#8f8e8e}");
+    CAButton->setStyleSheet("QPushButton{border:none; background:rgba(0,0,0,0); color:#24292e; text-align:left;}QPushButton:hover{color:#8f8e8e}");
     CAButton->setFont(MBFont);
 
     //Create Forgot Password Button
     QPushButton * FPButton = new QPushButton(LoginBox);
     FPButton->setText("Forgot Password...");
     FPButton->setGeometry(LBW * .1, LBH * .55, LBW * .475, LBH * .025);
-    FPButton->setStyleSheet("QPushButton{border:none; background:rgba(0,0,0,0); color:#696969; text-align:left;}QPushButton:hover{color:#8f8e8e}");
+    FPButton->setStyleSheet("QPushButton{border:none; background:rgba(0,0,0,0); color:#24292e; text-align:left;}QPushButton:hover{color:#8f8e8e}");
     FPButton->setFont(MBFont);
 
     //Slot Our Buttons
@@ -103,3 +115,7 @@ void LoginScreen::BuildScreen(){
     QObject::connect(LoginButton, SIGNAL(clicked()) , LF , SLOT(Login()));
 }
 
+void LoginScreen::BuildRightSide(){
+
+
+}
