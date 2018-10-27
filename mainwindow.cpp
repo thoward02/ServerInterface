@@ -7,6 +7,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent){
 
+    qDebug() << "[ -- Program starting -- ]";
     CustomizeWindow(); //Just to get the window full screen
     LoadFonts(); //Load any fonts we need
     int x = this->width();
