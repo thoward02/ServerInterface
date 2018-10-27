@@ -3,16 +3,27 @@
 
 #include <QFrame>
 #include <QObject>
+#include <QPushButton>
+#include <QDebug>
 
 class LoginScreen :  public QObject{
     Q_OBJECT
+
 public:
+
     int height, width;
-    QFrame * window;
     void Show();
 
+    QFrame * window;
+public slots:
+
+    void Login(){
+        qDebug() << "ss";
+        delete window;
+    };
 
 private:
+
     QFrame * interface;
     void BuildScreen();
     void BuildLeftSide();

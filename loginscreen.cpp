@@ -1,10 +1,10 @@
 #include "loginscreen.h"
-#include "loginfunctions.h"
 
 #include <QLabel>
 #include <QPushButton>
 #include <QLineEdit>
 #include <QFont>
+#include <iostream>
 
 void LoginScreen::Show(){
     //Build the Login Scren
@@ -111,11 +111,15 @@ void LoginScreen::BuildLeftSide(){
     FPButton->setFont(MBFont);
 
     //Slot Our Buttons
-    QObject * LF = new LoginFunctions;
-    QObject::connect(LoginButton, SIGNAL(clicked()) , LF , SLOT(Login()));
+    connect(LoginButton, SIGNAL(clicked()) , this , SLOT (Login()));
+    connect(CAButton, SIGNAL(clicked()) , this , SLOT (Login()));
+    connect(FPButton, SIGNAL(clicked()) , this , SLOT (Login()));
+
 }
 
 void LoginScreen::BuildRightSide(){
 
 
 }
+
+
