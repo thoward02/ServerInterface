@@ -1,13 +1,13 @@
 #include "mainwindow.h"
 #include "loginscreen.h"
 
+#include <QObject>
 #include <QDebug> //For logging purposes
 #include <QFrame>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent){
 
-    qDebug() << "[ -- Program starting -- ]";
     CustomizeWindow(); //Just to get the window full screen
     LoadFonts(); //Load any fonts we need
     int x = this->width();
