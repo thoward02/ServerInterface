@@ -8,6 +8,7 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QFont>
+#include <QDebug>
 
 void LoginScreen::Show(){
     //Build the Login Scren
@@ -114,7 +115,8 @@ void LoginScreen::BuildLeftSide(){
     FPButton->setFont(MBFont);
 
     //Slot Our Buttons
-    QObject * LSS = new LoginScreenSlots;
+    LSS->UsernameEntry = UsernameB;
+    LSS->LoginButton = LoginButton;
     QObject::connect(LoginButton, SIGNAL(clicked()), LSS, SLOT(Login()));
 
 }
@@ -122,6 +124,6 @@ void LoginScreen::BuildLeftSide(){
 void LoginScreen::BuildRightSide(){
 
 
-}
 
+}
 

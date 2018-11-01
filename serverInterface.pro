@@ -28,7 +28,8 @@ SOURCES += \
        main.cpp \
         $$PWD/Source/mainwindow.cpp \
         $$PWD/Source/loginscreen.cpp \
-    $$PWD/Source/loginscreenslots.cpp
+    $$PWD/Source/loginscreenslots.cpp \
+    Source/loginscreenslots.cpp
 
 
 HEADERS += \

@@ -1,10 +1,10 @@
-#include "Header/loginscreenslots.h"
+#include "loginscreenslots.h"
 
-#include <QtDebug>
-
-
-
+#include <QDebug>
 
 void LoginScreenSlots::Login(){
-    qDebug() << "HEllo";
+
+    //Login function
+    LoginButton->setHidden(true);
+
 }

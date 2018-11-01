@@ -4,7 +4,9 @@
 #include <QFrame>
 #include <QObject>
 #include <QMainWindow>
-#include <QDebug>
+
+#include "loginscreenslots.h"
+
 class LoginScreen :  public QObject{
     Q_OBJECT
 public:
@@ -19,9 +21,12 @@ public:
 
 private:
     QFrame * interface;
+
     void BuildScreen();
     void BuildLeftSide();
     void BuildRightSide();
+    LoginScreenSlots * LSS = new LoginScreenSlots;
+
     int LBH, LBW;
 
 
