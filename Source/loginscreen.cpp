@@ -116,6 +116,7 @@ void LoginScreen::BuildLeftSide(){
 
     //Slot Our Buttons
     LSS->UsernameEntry = UsernameB;
+    LSS->PasswordEntry = PasswordB;
     LSS->LoginButton = LoginButton;
     QObject::connect(LoginButton, SIGNAL(clicked()), LSS, SLOT(Login()));
 
